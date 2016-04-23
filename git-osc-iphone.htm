@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://www.jianshu.com/p/4ae9fd7d01cc -->
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="description" content="汽车资讯列表接口(爱卡汽车资讯列表):http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&amp;amp;offset=0&amp;amp;type=1&amp;amp;ver=6.1.2参数释义举例limit加载数量10,20,30type排列顺序呢1-6ver版本号6.1.2type:1--最新2--新闻3--评测4--导购5--行情(GPS定位实现推送本城市...">
+  <meta property="wb:webmaster" content="294ec9de89e7fadb">
+  <meta property="qc:admins" content="104102651453316562112116375">
+  <meta property="qc:admins" content="11635613706305617">
+  <meta property="qc:admins" content="1163561616621163056375">
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/p/4ae9fd7d01cc">
+    <!--  Meta for Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/2771300">
+  <!-- End -->
+
+  <!--  Meta for Twitter Card -->
+  <meta content="summary" property="twitter:card">
+  <meta content="@jianshucom" property="twitter:site">
+  <meta content="Car Project Interface Doc" property="twitter:title">
+  <meta content="汽车资讯列表接口(爱卡汽车资讯列表):http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&amp;amp;offset=0&amp;amp;type=1&amp;amp;ver=6.1.2参数释义举例limit加载数量10,20,30type排列顺序呢1-6ver版本号6.1.2type:1--最新2--新闻3--评测4--导购5--行情(GPS定位实现推送本城市..." property="twitter:description">
+  <meta content="http://www.jianshu.com/p/4ae9fd7d01cc" property="twitter:url">
+  <!-- End -->
+
+  <!--  Meta for OpenGraph -->
+  <meta property="fb:app_id" content="865829053512461">
+  <meta property="og:site_name" content="简书">
+  <meta property="og:title" content="Car Project Interface Doc">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.jianshu.com/p/4ae9fd7d01cc">
+  <meta property="og:description" content="汽车资讯列表接口(爱卡汽车资讯列表):http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&amp;amp;offset=0&amp;amp;t...">
+
+  <!-- End -->
+
+  <!--  Meta for Facebook Applinks -->
+  <meta property="al:ios:url" content="jianshu://notes/2771300">
+  <meta property="al:ios:app_store_id" content="888237539">
+  <meta property="al:ios:app_name" content="简书">
+
+  <meta property="al:android:url" content="jianshu://notes/2771300">
+  <meta property="al:android:package" content="com.jianshu.haruki">
+  <meta property="al:android:app_name" content="简书">
+  <!-- End -->
+
+  <title>Car Project Interface Doc - 简书</title>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="9F3KvkTz8bdVqjDi10snzqQbU6pIoESWvIdDUj9t7ADk3IxJVEAsTBEphTLFivGlwjC5eZEI0M49I3DeKevFUQ==">
+  <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="stylesheet" media="all" href="./git-osc-iphone_files/base-f935477e8faba16f29c6f9e4f0e1d032.css">
+
+    <link rel="stylesheet" media="all" href="./git-osc-iphone_files/reading-note-4158a6eeb7c4e4a9fd15332778cfb52c.css">
+  <link rel="stylesheet" media="all" href="./git-osc-iphone_files/base-read-mode-64acccf6966299cfa3d580140a2582fe.css">
+  <script src="./git-osc-iphone_files/push.js"></script><script type="text/javascript" async="" src="./git-osc-iphone_files/ga.js"></script><script src="./git-osc-iphone_files/hm.js"></script><script src="./git-osc-iphone_files/modernizr-613ea63b5aa2f0e2a1946e9c28c8eedb.js"></script>
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if IE 8]><link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/scaffolding/for_ie-7f1c477ffedc13c11315103e8787dc6c.css" /><![endif]-->
+  <!--[if lt IE 9]><link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/scaffolding/for_ie-7f1c477ffedc13c11315103e8787dc6c.css" /><![endif]-->
+  <link href="http://baijii-common.b0.upaiyun.com/icons/favicon.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/57-b426758a1fcfb30486f20fd073c3b8ec.png" sizes="57x57">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/72-feca4b183b9d29fd188665785dc7a7f1.png" sizes="72x72">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/76-ba757f1ad3421192ce7192170393d2b0.png" sizes="76x76">
+      <link rel="apple-touch-icon-precomposed" href="./git-osc-iphone_files/114-8dae53b3bcea3f06bb139e329d1edab3.png" sizes="114x114">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/120-fa315ee0177dba4c55d4f66d4129b47f.png" sizes="120x120">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/152-052f5799bec8fb3aa624bdc72ef5bd1d.png" sizes="152x152">
+    <meta id="current_user_id" value="1367171">
+    <meta id="current_user_slug" value="e5b5266354aa">
+  <!-- Baidu stats -->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+<style type="text/css"></style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><script type="text/javascript" src="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/frame.js"></script><link id="clearly_highlighting_css" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/highlight/css/style.css" rel="stylesheet" type="text/css"><link id="clearly_highlighting_css_images" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/highlight/css/images.css" rel="stylesheet" type="text/css"></head>
+
+<body class="post output zh cn mac reader-day-mode reader-font2 " data-js-module="note-show" data-locale="zh-CN" data-feedly-mini="yes">
+  
+  <div class="navbar navbar-jianshu shrink">
+  <div class="dropdown">
+    <a class="dropdown-toggle logo" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="javascript:void(0)">
+      简
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+      <li><a href="http://www.jianshu.com/"><i class="fa fa-home"></i> 首页</a></li>
+      <li><a href="http://www.jianshu.com/collections"><i class="fa fa-th"></i> 专题</a></li>
+      <li><a href="http://www.jianshu.com/user_invitations"><i class="fa fa-money"></i> 发钱啦</a></li>
+        <li><a href="http://www.jianshu.com/timeline"><i class="fa fa-users"></i> 简友圈</a></li>
+        <li><a href="http://www.jianshu.com/writer#/"><i class="fa fa-pencil"></i> 写文章</a></li>
+    </ul>
+  </div>
+</div>
+<div class="navbar-user">
+    <a class="user avatar" data-toggle="dropdown" href="javascript:void(0)">
+      <img src="./git-osc-iphone_files/05c9f89e23cf.jpg" alt="100"> <b class="caret"></b>
+</a>    <ul class="dropdown-menu arrow-top" role="menu" aria-labelledby="dLabel">
+      <li>
+  <a href="http://www.jianshu.com/writer#/"><i class="fa fa-pencil"></i> 写文章</a>
+</li>
+<li>
+  <a target="_blank" href="http://www.jianshu.com/users/e5b5266354aa"><i class="fa fa-user"></i> 我的主页</a>
+</li>
+  <li>
+    <a href="http://www.jianshu.com/favourites">
+      <i class="fa fa-heart"></i> 我喜欢的
+</a>  </li>
+  <li>
+    <a href="http://www.jianshu.com/bookmarks">
+      <i class="fa fa-bookmark"></i> 我的收藏
+</a>  </li>
+  <li>
+    <a href="http://www.jianshu.com/notifications">
+      <i class="fa fa-bell"></i> 提醒
+</a>  </li>
+  <li>
+    <a href="http://www.jianshu.com/chats">
+      <i class="fa fa-envelope"></i> 简信
+</a>  </li>
+  <li><a href="http://www.jianshu.com/settings"><i class="fa fa-cogs"></i> 设置</a></li>
+  <li>
+    <a href="http://www.jianshu.com/wallet">
+      <i class="fa fa-credit-card"></i> 钱包
+</a>  </li>
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="http://www.jianshu.com/p/4ae9fd7d01cc#"><i class="fa fa-question-circle"></i> 帮助</a>
+    <ul class="dropdown-menu">
+      <li><a href="http://www.jianshu.com/notebooks/547/latest" target="_blank">帮助中心</a></li>
+      <li><a target="_blank" href="http://www.jianshu.com/contact">联系我们</a></li>
+    </ul>
+  </li>
+  <li>
+    <a rel="nofollow" data-method="DELETE" href="http://www.jianshu.com/sign_out">
+      <i class="fa fa-sign-out"></i> 登 出
+</a>  </li>
+
+    </ul>
+    <a class="daytime set-view-mode pull-right" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>
+</div>
+<div class="navbar navbar-jianshu expanded">
+  <div class="dropdown">
+      <a class="active logo" role="button" data-original-title="个人主页" data-container="div.expanded" href="http://www.jianshu.com/">
+        <b>简</b><i class="fa fa-home"></i><span class="title">首页</span>
+</a>      <a data-toggle="tooltip" data-placement="right" data-original-title="专题" data-container="div.expanded" href="http://www.jianshu.com/collections">
+        <i class="fa fa-th"></i><span class="title">专题</span>
+</a>        <a data-toggle="tooltip" data-placement="right" data-original-title="简友圈" data-container="div.expanded" href="http://www.jianshu.com/timeline">
+          <i class="fa fa-users"></i><span class="title">简友圈</span>
+</a>        <a data-toggle="tooltip" data-placement="right" data-original-title="写文章" data-container="div.expanded" href="http://www.jianshu.com/writer#/">
+          <i class="fa fa-pencil"></i><span class="title">写文章</span>
+</a>    <a class="ad-selector" href="http://www.jianshu.com/apps">
+      <i class="fa fa-mobile"></i><span class="title">下载手机应用</span>
+</a>    <div class="ad-container ad-container-signed">
+      <div class="ad-pop">
+        <img class="ad-logo" src="./git-osc-iphone_files/114-8dae53b3bcea3f06bb139e329d1edab3.png" alt="114">
+        <p class="ad-title">简书</p>
+        <p class="ad-subtitle">交流故事，沟通想法</p>
+        <img class="ad-qrcode" src="./git-osc-iphone_files/download-app-qrcode-053849fa25f9b44573ef8dd3c118a20f.png" alt="Download app qrcode">
+        <div>
+          <a class="ad-link" href="https://itunes.apple.com/cn/app/jian-shu/id888237539?ls=1&amp;mt=8">iOS</a>·
+          <a class="ad-link" href="http://downloads.jianshu.io/apps/haruki/JianShu-1.10.5.apk">Android</a>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <div class="nav-user">
+      <a data-toggle="tooltip" data-placement="right" data-original-title="我的主页" data-container="div.expanded" href="http://www.jianshu.com/users/e5b5266354aa">
+        <i class="fa fa-user"></i><span class="title">我的主页</span>
+</a>
+        <a data-toggle="tooltip" data-placement="right" data-original-title="我的收藏" data-container="div.expanded" href="http://www.jianshu.com/bookmarks">
+          <i class="fa fa-bookmark"></i><span class="title">我的收藏</span>
+</a>
+        <a data-toggle="tooltip" data-placement="right" data-original-title="提醒" data-container="div.expanded" href="http://www.jianshu.com/notifications">
+
+          <i id="notify-icon" class="fa fa-bell"></i><span class="title">提醒</span>
+</a>
+        <a data-toggle="tooltip" data-placement="right" data-original-title="简信" data-container="div.expanded" href="http://www.jianshu.com/chats">
+            <i id="chat-message-icon" class="fa fa-envelope"></i><span class="title">简信</span>
+</a>
+        <a href="http://www.jianshu.com/p/4ae9fd7d01cc#view-mode-modal" data-toggle="modal"><i class="fa fa-font"></i><span class="title">显示模式</span></a>
+
+        <a data-toggle="tooltip" data-placement="right" data-original-title="设置" data-container="div.expanded" href="http://www.jianshu.com/settings">
+          <i class="fa fa-cogs"></i><span class="title">设置</span>
+</a>
+        <a data-toggle="tooltip" data-placement="right" data-original-title="登 出" data-container="div.expanded" rel="nofollow" data-method="delete" href="http://www.jianshu.com/sign_out">
+          <i class="fa fa-sign-out"></i><span class="title">登 出</span>
+</a>
+          </div>
+  </div>
+
+  
+    <div class="fixed-btn">
+    <a class="go-top" href="http://www.jianshu.com/p/4ae9fd7d01cc#"> <i class="fa fa-angle-up"></i></a>
+    <a class="qrcode" data-target="#bottom-qrcode" data-toggle="modal" href="javascript:void(0)"><i class="fa fa-qrcode"></i></a>
+    <a class="writer" href="http://www.jianshu.com/writer#/" data-toggle="tooltip" data-placement="left" title="" data-original-title="写篇文章"><i class="fa fa-pencil"></i></a>
+    <!-- qrcode modal -->
+    <div id="bottom-qrcode" class="modal panel-modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <h4>下载简书移动应用</h4>
+      <div class="panel-body"><img src="./git-osc-iphone_files/download-app-qrcode-85008f146773a25ce86bcc4d7858af68.png" alt="Download app qrcode"></div>
+    </div>
+  </div>
+
+
+  <div id="show-note-container">
+    
+
+<div class="post-bg" id="flag">
+  <div class="wrap-btn" style="top: -1px;">
+    <!-- Notebook and collections button upper left -->
+      <div class="article-related pull-left">
+          <a data-toggle="tooltip" data-placement="bottom" data-original-title="未加入专题" href="javascript:void(null);">
+            <i class="fa fa-th"></i>
+</a>          <a class="notebooks-menu-btn" data-toggle="modal" data-target="#notebooks-menu" href="javascript:void(null);"><i class="fa fa-list-ul"></i></a>
+        <div class="related-avatar-group activities"></div>
+      </div>
+    <!-- ******* -->
+
+      <a class="user avatar" data-toggle="dropdown" href="javascript:void(0)">
+    <img src="./git-osc-iphone_files/05c9f89e23cf.jpg" alt="100"> <b class="caret"></b>
+</a>  <ul class="dropdown-menu arrow-top" role="menu" aria-labelledby="dLabel">
+    <li>
+  <a href="http://www.jianshu.com/writer#/"><i class="fa fa-pencil"></i> 写文章</a>
+</li>
+<li>
+  <a target="_blank" href="http://www.jianshu.com/users/e5b5266354aa"><i class="fa fa-user"></i> 我的主页</a>
+</li>
+  <li>
+    <a href="http://www.jianshu.com/favourites">
+      <i class="fa fa-heart"></i> 我喜欢的
+</a>  </li>
+  <li>
+    <a href="http://www.jianshu.com/bookmarks">
+      <i class="fa fa-bookmark"></i> 我的收藏
+</a>  </li>
+  <li>
+    <a href="http://www.jianshu.com/notifications">
+      <i class="fa fa-bell"></i> 提醒
+</a>  </li>
+  <li>
+    <a href="http://www.jianshu.com/chats">
+      <i class="fa fa-envelope"></i> 简信
+</a>  </li>
+  <li><a href="http://www.jianshu.com/settings"><i class="fa fa-cogs"></i> 设置</a></li>
+  <li>
+    <a href="http://www.jianshu.com/wallet">
+      <i class="fa fa-credit-card"></i> 钱包
+</a>  </li>
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="http://www.jianshu.com/p/4ae9fd7d01cc#"><i class="fa fa-question-circle"></i> 帮助</a>
+    <ul class="dropdown-menu">
+      <li><a href="http://www.jianshu.com/notebooks/547/latest" target="_blank">帮助中心</a></li>
+      <li><a target="_blank" href="http://www.jianshu.com/contact">联系我们</a></li>
+    </ul>
+  </li>
+  <li>
+    <a rel="nofollow" data-method="DELETE" href="http://www.jianshu.com/sign_out">
+      <i class="fa fa-sign-out"></i> 登 出
+</a>  </li>
+
+  </ul>
+
+
+    <!-- Buttons upper right -->
+      <div class="btn-group editor-article">
+                  <a class="daytime set-view-mode" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>
+        <span>
+          
+          
+          
+
+            <a data-type="json" data-mcomponent="easy-bookmark" class="bookmark" data-remote="true" rel="nofollow" data-method="post" href="http://www.jianshu.com/notes/2771300/bookmark" data-original-title="" title="">
+    <i class="fa fa-bookmark-o"></i><span>收藏文章</span>
+</a>
+        <!--<a href="javascript:void(null)" data-toggle="dropdown" id="top-share-button" data-original-title="" title=""><i class="fa fa-share-square-o"></i></a><ul class="dropdown-menu top-share-dropdown arrow-top"><li><a data-toggle="modal" href="http://www.jianshu.com/p/4ae9fd7d01cc#share-weixin-modal"><img src="./git-osc-iphone_files/weixin.png"> 分享到微信</a></li><li><a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://cwb.assets.jianshu.io/notes/images/2771300/weibo/image_205cce98fdd8.jpg&#39;, &#39;推荐 大大大龙 的文章《Car Project Interface Doc》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"><img src="./git-osc-iphone_files/weibo.png"> 分享到微博</a></li><li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 大大大龙 的文章《Car Project Interface Doc》（ 分享自 @jianshuio ）&#39;),x=function(){if(!window.open(r,&#39;tweibo&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><img src="./git-osc-iphone_files/tweibo.png"> 分享到腾讯微博</a></li><li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 大大大龙 的文章《Car Project Interface Doc》&#39;),x=function(){if(!window.open(r,&#39;qzone&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><img src="./git-osc-iphone_files/qzone.png"> 分享到QQ空间</a></li><li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://twitter.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;text=&#39;+e(&#39;推荐 大大大龙 的文章《Car Project Interface Doc》（ 分享自 @jianshucom ）&#39;)+&#39;&amp;related=&#39;+e(&#39;jianshucom&#39;),x=function(){if(!window.open(r,&#39;twitter&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><img src="./git-osc-iphone_files/twitter.png"> 分享到Twitter</a></li><li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;title=&#39;+e(&#39;Car Project Interface Doc&#39;)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()"><img src="./git-osc-iphone_files/douban.png"> 分享到豆瓣</a></li><li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/4ae9fd7d01cc&#39;,x=function(){if(!window.open(r,&#39;facebook&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><img src="./git-osc-iphone_files/facebook.png"> 分享到Facebook</a></li><li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://plus.google.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;),x=function(){if(!window.open(r,&#39;google_plus&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();"><img src="./git-osc-iphone_files/google_plus.png"> 分享到Google+</a></li><li><a href="http://cwb.assets.jianshu.io/notes/images/2771300/weibo/image_205cce98fdd8.jpg" target="_blank"><i class="fa fa-arrow-circle-o-down"></i>下载长微博图片</a></li></ul></span>-->
+      </div>
+    <!-- ******* -->
+  </div>
+
+  <div class="container">
+    <!-- Article activities for width under 768px -->
+    <div class="related-avatar-group activities"></div>
+      <div class="article">
+        <div class="preview">
+          <div class="author-info">
+              <div class="btn btn-small btn-success follow" id="follow_user_1421825">
+    <!--<a data-type="json" data-user-slug="3f0dc6265e87" data-remote="true" rel="nofollow" data-method="post" href="http://www.jianshu.com/users/3f0dc6265e87/toggle_like"><i class="fa fa-plus"></i>  <span>添加关注</span></a>-->
+  </div>
+
+            <a class="avatar" href="http://www.jianshu.com/users/3f0dc6265e87">
+</a>            <span class="label">
+                作者
+            </span>
+              <p></p>
+
+              <p>坤歌歌</p>
+            <div>
+            </div>
+          </div>
+          <h1 class="title">Car Project Interface Doc</h1>
+          <div class="meta-top">
+            <span class="wordage">字数1338</span>
+            <span class="views-count">阅读100万+</span>
+            <span class="comments-count">评论89万</span>
+            <span class="likes-count">喜欢66万</span>
+          </div>
+
+          <!-- Collection/Bookmark/Share for width under 768px -->
+          <div class="article-share"></div>
+          <!-- -->
+
+          <div class="show-content"><h1>汽车资讯列表</h1>
+<h5>接口(爱卡汽车资讯列表):</h5>
+<p><a href="http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&amp;offset=0&amp;type=1&amp;ver=6.1.2" target="_blank">http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&amp;offset=0&amp;type=1&amp;ver=6.1.2</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>limit</td>
+<td>加载数量</td>
+<td>10,20,30</td>
+</tr>
+<tr>
+<td>type</td>
+<td>排列顺序呢</td>
+<td>1-6</td>
+</tr>
+<tr>
+<td>ver</td>
+<td>版本号</td>
+<td>6.1.2</td>
+</tr>
+</tbody>
+</table>
+<p>type:<br>1 -- 最新<br>2 -- 新闻<br>3 -- 评测<br>4 -- 导购<br>5 -- 行情 (GPS定位实现推送本城市 -- 暂定删除)<br>6 -- 休闲(奇闻车事)</p>
+<p>数据为 Get请求Json数据<br>例如:</p>
+<pre class="hljs json"><code class="json">{
+    "<span class="hljs-attribute">focusList</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">focusImgs</span>": <span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1900726</span></span>,
+                "<span class="hljs-attribute">imgURL</span>": <span class="hljs-value"><span class="hljs-string">"http://pic.xcarimg.com/img/news_photo/2016/01/06/a_ud2Lv2v8381452049427920944145204942792.jpg"</span></span>,
+                "<span class="hljs-attribute">newsLink</span>": <span class="hljs-value"><span class="hljs-string">"http://a.xcar.com.cn/interface/6.0/getNewsDetails.php?newsid=1900726&amp;put_time=201601&amp;"</span></span>,
+                "<span class="hljs-attribute">pageNum</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+                "<span class="hljs-attribute">pubTime</span>": <span class="hljs-value"><span class="hljs-string">"201601"</span></span>,
+                "<span class="hljs-attribute">statisticsUrl</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"汽车好声音 17款性能车暴躁排气炸隧道"</span></span>,
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+                "<span class="hljs-attribute">webLink</span>": <span class="hljs-value"><span class="hljs-string">"http://info.xcar.com.cn/201601/news_1900726_1.html"</span>
+            </span>},
+            ...
+        }
+        ]</span>,
+        "<span class="hljs-attribute">imgHeight</span>": <span class="hljs-value"><span class="hljs-number">256</span></span>,
+        "<span class="hljs-attribute">imgWidth</span>": <span class="hljs-value"><span class="hljs-number">512</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">newsLast</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+    "<span class="hljs-attribute">newsList</span>": <span class="hljs-value">[
+        {
+            "<span class="hljs-attribute">commentCount</span>": <span class="hljs-value"><span class="hljs-number">8</span></span>,
+            "<span class="hljs-attribute">isSpread</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+            "<span class="hljs-attribute">newsCategory</span>": <span class="hljs-value"><span class="hljs-string">"国内新车"</span></span>,
+            "<span class="hljs-attribute">newsCreateTime</span>": <span class="hljs-value"><span class="hljs-number">1452009600</span></span>,
+            "<span class="hljs-attribute">newsId</span>": <span class="hljs-value"><span class="hljs-number">1901700</span></span>,
+            "<span class="hljs-attribute">newsImage</span>": <span class="hljs-value"><span class="hljs-string">"http://pic.xcarimg.com/img/07news/201601/1gbhSTVRcF1452061434664031145206143466.jpg-200x150.jpg"</span></span>,
+            "<span class="hljs-attribute">newsLink</span>": <span class="hljs-value"><span class="hljs-string">"http://a.xcar.com.cn/interface/6.0/getNewsDetails.php?newsid=1901700&amp;put_time=201601"</span></span>,
+            "<span class="hljs-attribute">newsTitle</span>": <span class="hljs-value"><span class="hljs-string">"长安福特翼搏限量版官图 预计2月底上市"</span></span>,
+            "<span class="hljs-attribute">newsType</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+            "<span class="hljs-attribute">pubTime</span>": <span class="hljs-value"><span class="hljs-string">"201601"</span></span>,
+            "<span class="hljs-attribute">webLink</span>": <span class="hljs-value"><span class="hljs-string">"http://info.xcar.com.cn/201601/news_1901700_1.html"</span>
+        </span>},
+        ...
+    ]
+</span>}</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>focusList</td>
+<td>焦点数据</td>
+<td>dic</td>
+<td>轮播图</td>
+</tr>
+<tr>
+<td>focusImgs</td>
+<td>焦点列表清单</td>
+<td>array</td>
+<td>轮播图数据</td>
+</tr>
+<tr>
+<td>imgHeight</td>
+<td>轮播图高</td>
+<td>int</td>
+<td>轮播图高:256</td>
+</tr>
+<tr>
+<td>imgWidth</td>
+<td>轮播图宽</td>
+<td>int</td>
+<td>轮播图高:512</td>
+</tr>
+<tr>
+<td>newsList</td>
+<td>资讯清单</td>
+<td>array</td>
+<td>TableView数据</td>
+</tr>
+</tbody>
+</table>
+<p>轮播图数组中得数据类型:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>ID</td>
+<td>int</td>
+<td>1900726</td>
+</tr>
+<tr>
+<td>imgURL</td>
+<td>图片链接</td>
+<td>NSString</td>
+<td>-</td>
+</tr>
+<tr>
+<td>newsLink</td>
+<td>详情链接</td>
+<td>NSString</td>
+<td>-</td>
+</tr>
+<tr>
+<td>pageNum</td>
+<td>-</td>
+<td>int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>pubTime</td>
+<td>发布时间</td>
+<td>NSString</td>
+<td>"201601"(没有日期)</td>
+</tr>
+<tr>
+<td>statisticsUrl</td>
+<td>-</td>
+<td>NSString</td>
+<td>""</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>NSString</td>
+<td>"汽车好声音 17款性能车暴躁..."</td>
+</tr>
+<tr>
+<td>type</td>
+<td>类型</td>
+<td>int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>webLink</td>
+<td>网页链接</td>
+<td>NSString</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>newList(普通资讯)数组中的数据:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>commentCount</td>
+<td>评论数</td>
+<td>int</td>
+<td>8</td>
+</tr>
+<tr>
+<td>isSpread</td>
+<td>是否热门</td>
+<td>int</td>
+<td>0-不是 1-是</td>
+</tr>
+<tr>
+<td>newsCategory</td>
+<td>资讯分类</td>
+<td>NSString</td>
+<td>"国内新车" 与isSpread冲突</td>
+</tr>
+<tr>
+<td>newsCreateTime</td>
+<td>发生时间</td>
+<td>int</td>
+<td>1452009600 需转换为Date</td>
+</tr>
+<tr>
+<td>newsId</td>
+<td>新闻ID</td>
+<td>int</td>
+<td>1901700</td>
+</tr>
+<tr>
+<td>newsImage</td>
+<td>新闻图片链接</td>
+<td>NSString</td>
+<td>-</td>
+</tr>
+<tr>
+<td>newsLink</td>
+<td>新闻链接</td>
+<td>NSString</td>
+<td>-</td>
+</tr>
+<tr>
+<td>newsTitle</td>
+<td>标题</td>
+<td>NSString</td>
+<td>"长安福特翼搏限量版.."</td>
+</tr>
+<tr>
+<td>newsType</td>
+<td>新闻类型</td>
+<td>int</td>
+<td>2</td>
+</tr>
+<tr>
+<td>pubTime</td>
+<td>发布时间</td>
+<td>NSString</td>
+<td>201601</td>
+</tr>
+<tr>
+<td>webLink</td>
+<td>网页链接</td>
+<td>NSString</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h1>找车列表</h1>
+<p>tableView数据为本地Plist文件,详情为网络请求数据<br>Plist文件:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>车辆品牌</td>
+<td>NSString</td>
+<td>"阿斯顿马丁"</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>车标图片名</td>
+<td>NSString</td>
+<td>"m_97_100.png"</td>
+</tr>
+<tr>
+<td>brandid</td>
+<td>品牌ID</td>
+<td>int</td>
+<td>详情接口参数(Plist此项待添加)</td>
+</tr>
+</tbody>
+</table>
+<p>品牌详情数据接口(汽车之家App):<br><a href="http://app.api.autohome.com.cn/autov5.0.0/cars/seriesprice-pm1-b35-t2.json" target="_blank">http://app.api.autohome.com.cn/autov5.0.0/cars/seriesprice-pm1-b35-t2.json</a></p>
+<p>其中b35为可变参数,由brandId决定,具体数据事例:</p>
+<pre class="hljs json"><code class="json">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">"ok"</span></span>,
+    "<span class="hljs-attribute">result</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">fctlist</span>": <span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"阿斯顿·马丁"</span></span>,
+                "<span class="hljs-attribute">serieslist</span>": <span class="hljs-value">[
+                    {
+                        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">923</span></span>,
+                        "<span class="hljs-attribute">imgurl</span>": <span class="hljs-value"><span class="hljs-string">"http://car0.autoimg.cn/upload/2014/2/11/s_201402111825333964435.jpg"</span></span>,
+                        "<span class="hljs-attribute">levelid</span>": <span class="hljs-value"><span class="hljs-number">6</span></span>,
+                        "<span class="hljs-attribute">levelname</span>": <span class="hljs-value"><span class="hljs-string">"大型车"</span></span>,
+                        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Rapide"</span></span>,
+                        "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-string">"364.50-428.00万"</span>
+                    </span>},
+                     ...
+                ]
+            </span>}
+        ]
+    </span>}</span>,
+    "<span class="hljs-attribute">returncode</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+</span>}</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>子品牌</td>
+<td>NSString</td>
+<td>作为详情页分组名</td>
+</tr>
+<tr>
+<td>serieslist</td>
+<td>旗下车型</td>
+<td>NSArray</td>
+<td>详情页数据</td>
+</tr>
+</tbody>
+</table>
+<p>具体serieslist中元素:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>释义</th>
+<th>类型</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>车型ID</td>
+<td>int</td>
+<td>详情接口参数</td>
+</tr>
+<tr>
+<td>imgurl</td>
+<td>图片链接</td>
+<td>NSString</td>
+<td>row图</td>
+</tr>
+<tr>
+<td>levelid</td>
+<td>车型种类ID</td>
+<td>int</td>
+<td>与levelname对应</td>
+</tr>
+<tr>
+<td>levelname</td>
+<td>车型种类</td>
+<td>NSString</td>
+<td>与levelid对应</td>
+</tr>
+<tr>
+<td>name</td>
+<td>车型名称</td>
+<td>NSString</td>
+<td>row名</td>
+</tr>
+<tr>
+<td>price</td>
+<td>价格</td>
+<td>NSString</td>
+<td>row备注</td>
+</tr>
+</tbody>
+</table>
+<p>车辆详情接口<br><a href="http://app.api.autohome.com.cn/autov5.0.0/cars/seriessummary-pm1-s3170-t-c110100.json" target="_blank">http://app.api.autohome.com.cn/autov5.0.0/cars/seriessummary-pm1-s3170-t-c110100.json</a></p>
+<pre class="hljs json"><code class="json">{
+    "<span class="hljs-attribute">message</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+    "<span class="hljs-attribute">result</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">2sccount</span>": <span class="hljs-value"><span class="hljs-number">21</span></span>,
+        "<span class="hljs-attribute">attentionspecid</span>": <span class="hljs-value"><span class="hljs-number">18637</span></span>,
+        "<span class="hljs-attribute">brandid</span>": <span class="hljs-value"><span class="hljs-number">33</span></span>,
+        "<span class="hljs-attribute">canaskprice</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+        "<span class="hljs-attribute">carmalltext</span>": <span class="hljs-value"><span class="hljs-string">"折"</span></span>,
+        "<span class="hljs-attribute">carmalltitle</span>": <span class="hljs-value"><span class="hljs-string">"奥迪A3：16.88万，至少省3.71万"</span></span>,
+        "<span class="hljs-attribute">carmallurl</span>": <span class="hljs-value"><span class="hljs-string">"http://mall.autohome.com.cn/list/0-110100-33-3170-0-0-0-0-0-1.html#pvareaid=103236"</span></span>,
+        "<span class="hljs-attribute">clubid</span>": <span class="hljs-value"><span class="hljs-number">3170</span></span>,
+        "<span class="hljs-attribute">dealercount</span>": <span class="hljs-value"><span class="hljs-number">25</span></span>,
+        "<span class="hljs-attribute">enginelist</span>": <span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"1.4升 涡轮增压 150马力"</span></span>,
+                "<span class="hljs-attribute">speclist</span>": <span class="hljs-value">[
+                    {
+                        "<span class="hljs-attribute">attention</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
+                        "<span class="hljs-attribute">canaskprice</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+                        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"前置前驱 7挡双离合"</span></span>,
+                        "<span class="hljs-attribute">electriccarname</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                        "<span class="hljs-attribute">electriccarval</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">18637</span></span>,
+                        "<span class="hljs-attribute">minprice</span>": <span class="hljs-value"><span class="hljs-string">"13.91万起"</span></span>,
+                        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"2014款 Sportback 35 TFSI 自动进取型"</span></span>,
+                        "<span class="hljs-attribute">paramisshow</span>": <span class="hljs-value"><span class="hljs-string">"1"</span></span>,
+                        "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-string">"19.99万"</span></span>,
+                        "<span class="hljs-attribute">state</span>": <span class="hljs-value"><span class="hljs-number">20</span></span>,
+                        "<span class="hljs-attribute">structure</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+                    </span>},
+                    ...
+                ]</span>,
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"0x000c"</span>
+            </span>},
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"1.8升 涡轮增压 180马力"</span></span>,
+                "<span class="hljs-attribute">speclist</span>": <span class="hljs-value">[
+                    {
+                        "<span class="hljs-attribute">attention</span>": <span class="hljs-value"><span class="hljs-number">40</span></span>,
+                        "<span class="hljs-attribute">canaskprice</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+                        "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"前置前驱 7挡双离合"</span></span>,
+                        "<span class="hljs-attribute">electriccarname</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                        "<span class="hljs-attribute">electriccarval</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+                        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">21567</span></span>,
+                        "<span class="hljs-attribute">minprice</span>": <span class="hljs-value"><span class="hljs-string">"18.33万起"</span></span>,
+                        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"2015款 Sportback 40 TFSI 自动舒适型"</span></span>,
+                        "<span class="hljs-attribute">paramisshow</span>": <span class="hljs-value"><span class="hljs-string">"1"</span></span>,
+                        "<span class="hljs-attribute">price</span>": <span class="hljs-value"><span class="hljs-string">"26.56万"</span></span>,
+                        "<span class="hljs-attribute">state</span>": <span class="hljs-value"><span class="hljs-number">20</span></span>,
+                        "<span class="hljs-attribute">structure</span>": <span class="hljs-value"><span class="hljs-string">""</span>
+                    </span>},
+                    ...
+                ]</span>,
+                "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"0x000c"</span>
+            </span>}
+        ]</span>,
+        "<span class="hljs-attribute">explaincount</span>": <span class="hljs-value"><span class="hljs-number">13</span></span>,
+        "<span class="hljs-attribute">fctprice</span>": <span class="hljs-value"><span class="hljs-string">"18.49-29.67万"</span></span>,
+        "<span class="hljs-attribute">hascarmall</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+        "<span class="hljs-attribute">koubeicount</span>": <span class="hljs-value"><span class="hljs-number">709</span></span>,
+        "<span class="hljs-attribute">koubeiscore</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+        "<span class="hljs-attribute">levelname</span>": <span class="hljs-value"><span class="hljs-string">"紧凑型车"</span></span>,
+        "<span class="hljs-attribute">logo</span>": <span class="hljs-value"><span class="hljs-string">"http://car0.autoimg.cn/car/upload/2015/4/26/w_201504262235149784971112.jpg"</span></span>,
+        "<span class="hljs-attribute">lowprice</span>": <span class="hljs-value"><span class="hljs-string">"12.94"</span></span>,
+        "<span class="hljs-attribute">manyvictors</span>": <span class="hljs-value">{
+        }</span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"奥迪A3"</span></span>,
+        "<span class="hljs-attribute">newscount</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
+        "<span class="hljs-attribute">ownerpricecount</span>": <span class="hljs-value"><span class="hljs-number">709</span></span>,
+        "<span class="hljs-attribute">paramlist</span>": <span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"级别"</span></span>,
+                "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-string">"紧凑型车"</span>
+            </span>},
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"发动机"</span></span>,
+                "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-string">"1.4T 1.8T"</span>
+            </span>},
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"变速箱"</span></span>,
+                "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-string">"手动 双离合"</span>
+            </span>}
+        ]</span>,
+        "<span class="hljs-attribute">piccount</span>": <span class="hljs-value"><span class="hljs-number">2968</span></span>,
+        "<span class="hljs-attribute">shareinfo</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">logo</span>": <span class="hljs-value"><span class="hljs-string">"http://car0.autoimg.cn/car/upload/2015/4/26/t_201504262235149784971112.jpg"</span></span>,
+            "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"奥迪A3"</span></span>,
+            "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"http://m.autohome.com.cn/3170/"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">spectype</span>": <span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"在售"</span></span>,
+                "<span class="hljs-attribute">value</span>": <span class="hljs-value"><span class="hljs-string">"0x000c"</span>
+            </span>}
+        ]</span>,
+        "<span class="hljs-attribute">stopsellcarnum</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
+        "<span class="hljs-attribute">topiccount</span>": <span class="hljs-value"><span class="hljs-number">42320</span></span>,
+        "<span class="hljs-attribute">videocount</span>": <span class="hljs-value"><span class="hljs-number">13</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">returncode</span>": <span class="hljs-value"><span class="hljs-number">0</span>
+</span>}</code></pre>
+<p>车辆详情 图片接口<br><a href="http://app.api.autohome.com.cn/autov5.0.0/cars/pics-pm1-ss3170-sp0-cg0-cl0-p1-s60-ft1.json" target="_blank">http://app.api.autohome.com.cn/autov5.0.0/cars/pics-pm1-ss3170-sp0-cg0-cl0-p1-s60-ft1.json</a><br>ss 是车辆id</p>
+<p>车辆详情 资讯接口<br><a href="http://app.api.autohome.com.cn/autov5.0.0/news/seriesnews-pm1-ss3170-cs10000-c110100-s20-lastid0.json" target="_blank">http://app.api.autohome.com.cn/autov5.0.0/news/seriesnews-pm1-ss3170-cs10000-c110100-s20-lastid0.json</a><br>ss是车辆id<br>lastid 是上一次加载的最后一条资讯的id</p>
+<p>车辆详情 经销商接口<br><a href="http://app.api.autohome.com.cn/autov5.0.0/dealer/pddealers-pm1-sp0-ss3170-c110100-sc0-p1-s20-o0-lon0.000000-lat0.000000.json" target="_blank">http://app.api.autohome.com.cn/autov5.0.0/dealer/pddealers-pm1-sp0-ss3170-c110100-sc0-p1-s20-o0-lon0.000000-lat0.000000.json</a><br>ss是车辆id</p>
+</div>
+        </div>
+      </div>
+
+      <div class="visitor_edit">
+        <!-- further readings -->
+        <div id="further-readings" data-user-slug="e5b5266354aa" data-user-nickname="simplecode">
+          <div id="further-reading-line" class="hide further-reading-line"></div>
+          <ul id="further-readings-list" class="reading-list unstyled"></ul>
+          <div id="further-reading-new" class="reading-edit">
+              <a id="further-reading-new-prompt" href="javascript:void(null)">
+                <i class="fa fa-plus-circle"></i> 推荐拓展阅读
+</a>            <div id="further-reading-form"></div>
+          </div>
+        </div>
+        <div class="pull-right">
+          <!-- abuse report -->
+          <div id="abuse-report" class="report_article dropdown pull-right" data-js-module="report">
+              <a data-toggle="dropdown" href="http://www.jianshu.com/p/4ae9fd7d01cc#"><i class="fa fa-flag-o"></i> 举报文章</a>
+              <ul class="dropdown-menu arrow-top">
+                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="http://www.jianshu.com/notes/2771300/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="http://www.jianshu.com/notes/2771300/abuse_reports?type=plagiarism">抄袭或未授权转载</a></li>
+                <li><a data-toggle="modal" data-url="/notes/2771300/abuse_reports" href="http://www.jianshu.com/p/4ae9fd7d01cc#report-modal">其他</a></li>
+              </ul>
+          </div>
+          <!-- copyright -->
+          <div class="author-copyright pull-right" data-toggle="tooltip" data-html="true" title="" data-original-title="转载请联系作者获得授权，并标注“简书作者”。">
+            <a><i class="fa fa-copyright"></i> 著作权归作者所有</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reward / Support Author -->
+        <div class="support-author">
+          <p>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</p>
+            <a class="btn btn-pay" data-toggle="modal" href="http://www.jianshu.com/p/4ae9fd7d01cc#pay-modal">¥ 打赏支持</a>
+          <div class="avatar-list"></div>
+        </div>
+
+      <!-- article meta bottom -->
+      <div class="meta-bottom clearfix">
+        <!--  Like Button -->
+        <div class="like  note-liked">
+            <div class="like-button">
+              <a class="like-content" data-remote="true" rel="nofollow" data-method="post" href="http://www.jianshu.com/notes/2771300/like">
+                <i class="fa fa-heart"></i>  喜欢
+</a></div>          <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户">3</span>        </div>
+        <!--  share group -->
+        <div class="share-group pull-right">
+          <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://cwb.assets.jianshu.io/notes/images/2771300/weibo/image_205cce98fdd8.jpg&#39;, &#39;推荐 大大大龙 的文章《Car Project Interface Doc》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));" data-name="weibo">
+            <i class="fa fa-weibo"></i><span>分享到微博</span>
+          </a>
+          <a data-toggle="modal" href="http://www.jianshu.com/p/4ae9fd7d01cc#share-weixin-modal" data-name="weixin">
+            <i class="fa fa-weixin"></i><span>分享到微信</span>
+          </a>
+          <div class="more">
+            <a href="javascript:void(0)" data-toggle="dropdown">更多分享<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu arrow-top">
+                <li><a href="http://cwb.assets.jianshu.io/notes/images/2771300/weibo/image_205cce98fdd8.jpg" target="_blank" data-name="changweibo"><i class="fa fa-arrow-circle-o-down"></i> 下载长微博图片</a></li>
+                <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 大大大龙 的文章《Car Project Interface Doc》（ 分享自 @jianshuio ）&#39;),x=function(){if(!window.open(r,&#39;tweibo&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();" data-name="tweibo"><img src="./git-osc-iphone_files/tweibo.png">分享到腾讯微博</a></li>
+                <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;title=&#39;+e(&#39;推荐 大大大龙 的文章《Car Project Interface Doc》&#39;),x=function(){if(!window.open(r,&#39;qzone&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();" data-name="qzone"><img src="./git-osc-iphone_files/qzone.png">分享到QQ空间</a></li>
+                <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://twitter.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;text=&#39;+e(&#39;推荐 大大大龙 的文章《Car Project Interface Doc》（ 分享自 @jianshucom ）&#39;)+&#39;&amp;related=&#39;+e(&#39;jianshucom&#39;),x=function(){if(!window.open(r,&#39;twitter&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();" data-name="twitter"><img src="./git-osc-iphone_files/twitter.png">分享到Twitter</a></li>
+                <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/4ae9fd7d01cc&#39;,x=function(){if(!window.open(r,&#39;facebook&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();" data-name="facebook"><img src="./git-osc-iphone_files/facebook.png">分享到Facebook</a></li>
+                <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,r=&#39;https://plus.google.com/share?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;),x=function(){if(!window.open(r,&#39;google_plus&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();" data-name="google_plus"><img src="./git-osc-iphone_files/google_plus.png">分享到Google+</a></li>
+                <li><a href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:&#39;&#39;,r=&#39;http://www.douban.com/recommend/?url=&#39;+e(&#39;http://www.jianshu.com/p/4ae9fd7d01cc&#39;)+&#39;&amp;title=&#39;+e(&#39;Car Project Interface Doc&#39;)+&#39;&amp;sel=&#39;+e(s)+&#39;&amp;v=1&#39;,x=function(){if(!window.open(r,&#39;douban&#39;,&#39;toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330&#39;))location.href=r+&#39;&amp;r=1&#39;};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()" data-name="douban"><img src="./git-osc-iphone_files/douban.png">分享到豆瓣</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modals -->
+      <div id="share-weixin-modal" class="modal hide fade share-weixin-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body" title="http://www.jianshu.com/p/4ae9fd7d01cc?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weixin">
+    <h5>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</h5>
+  <canvas width="170" height="170" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+</div>
+
+      <div id="contribute-modal" tabindex="-1" class="arrow-top user-editor-actions modal hide fade">
+  <div class="modal-header">
+    <b>
+      添加到我管理的专题
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    </b>
+  </div>
+  <div class="modal-body">
+    <div class="search">
+      <input type="text" name="search_term" id="search_term" class="input-large search-query" placeholder="搜索我管理的专题" data-search-collections-url="/collections/search?note_id=2771300">
+    </div>
+    <ul class="add-list"></ul>
+  </div>
+</div>
+
+      <div id="notebooks-menu" class="panel notebooks-menu arrow-top modal hide fade"><img class="loader-tiny" src="./git-osc-iphone_files/tiny.gif" alt="Tiny"></div>
+      <div id="collection-menu" class="panel collection-menu arrow-top modal hide fade"><img class="loader-tiny" src="./git-osc-iphone_files/tiny.gif" alt="Tiny"></div>
+      
+      <div id="likes-modal" class="modal modal_new support_list-modal fullscreen hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>喜欢的用户</h3>
+      </div>
+      <div class="modal-body">
+        <ul class="unstyled users"><li data-user-id="1367171">
+  <a class="avatar" href="http://www.jianshu.com/users/e5b5266354aa"><img src="./git-osc-iphone_files/05c9f89e23cf.jpg" alt="100"></a>
+  <a class="blue-link" href="http://www.jianshu.com/users/e5b5266354aa">simplecode</a>
+  <span class="time">2016.04.23 17:32</span>
+</li>
+
+        <li data-user-id="1218044"> <a class="avatar" href="http://www.jianshu.com/users/c5375a63a97b"> <img src="./git-osc-iphone_files/d8f119b3e5a3.jpg"> </a> <a class="blue-link" href="http://www.jianshu.com/users/c5375a63a97b">Emo_Lin</a> <span class="time">2016.03.01 23:45</span></li><li data-user-id="1364396"> <a class="avatar" href="http://www.jianshu.com/users/c2da8a0399cb"> <img src="./git-osc-iphone_files/fc97be8debb3"> </a> <a class="blue-link" href="http://www.jianshu.com/users/c2da8a0399cb">小行为</a> <span class="time">2016.02.23 11:58</span></li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Comments -->
+    <div id="comments" class="comment-list clearfix">
+        <div class="comment-head clearfix">
+          0条评论
+          <span class="order">
+            （
+            <a data-order="asc" class="active" href="javascript:void(0)">按时间正序</a>·
+            <a data-order="desc" href="javascript:void(0)">按时间倒序</a>·
+            <a data-order="likes_count" href="javascript:void(0)">按喜欢排序</a>
+            ）
+          </span>
+            <a href="javascript:void(null)" class="goto-comment pull-right"><i class="fa fa-pencil"></i>添加新评论</a>
+        </div>
+        <div id="comment-list"><script type="application/json" data-name="comments-info">
+  {"comments":[],"liked":[]}
+</script>
+
+
+
+</div>
+          <form class="new_comment" id="new_comment" data-type="json" action="http://www.jianshu.com/notes/2771300/comments" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+    <div class="comment-text">
+      <textarea maxlength="2000" placeholder="写下你的评论…" class="mousetrap" name="comment[content]" id="comment_content"></textarea>
+      <div>
+        <input type="submit" name="commit" value="发 表" class="btn btn-info" data-disable-with="提交中...">
+          <div class="emoji">
+    <a href="http://www.jianshu.com/p/4ae9fd7d01cc#emoji-modal" data-toggle="modal"><i class="fa fa-smile-o"></i></a>
+    <div id="emoji-modal" class="emoji-modal arrow-top hide" tabindex="-1" aria-hidden="true">
+      <ul id="emojiTab" class="emoji-nav-tabs modal-header">
+          <li class="active"><a href="http://www.jianshu.com/p/4ae9fd7d01cc#emoji-pane-1" data-toggle="tab">1</a></li>
+          <li class=""><a href="http://www.jianshu.com/p/4ae9fd7d01cc#emoji-pane-2" data-toggle="tab">2</a></li>
+          <li class=""><a href="http://www.jianshu.com/p/4ae9fd7d01cc#emoji-pane-3" data-toggle="tab">3</a></li>
+          <li class=""><a href="http://www.jianshu.com/p/4ae9fd7d01cc#emoji-pane-4" data-toggle="tab">4</a></li>
+      </ul>
+      <div id="emojiTabContent" class="tab-content">
+          <div class="tab-pane fade active in" id="emoji-pane-1">
+          <ul>
+          </ul>
+        </div>
+          <div class="tab-pane fade  in" id="emoji-pane-2">
+          <ul>
+          </ul>
+        </div>
+          <div class="tab-pane fade  in" id="emoji-pane-3">
+          <ul>
+          </ul>
+        </div>
+          <div class="tab-pane fade  in" id="emoji-pane-4">
+          <ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          <span class="hotkey">⌘+Return 发表</span>
+        <span class="warning" style="display: none"><i class="fa fa-exclamation-circle"></i><span class="warning-text"></span></span>
+      </div>
+    </div>
+</form>
+    </div>
+    <!-- -->
+
+  </div>
+
+  <script type="application/json" data-name="note">
+    {"id":2771300,"abbr":"汽车资讯列表接口(爱卡汽车资讯列表):http://a.xcar.com.cn/interface/6.0/getNewsList.php?limit=10&amp;offset=0&amp;type=1&amp;ver=6.1.2参数释义举例limit加载数量10,20,30type排列顺序呢1-6ver版本号6.1.2type:1--最新2--新闻3--评测4--导购5--行情(GPS定位实现推送本城市...","slug":"4ae9fd7d01cc","url":"http://www.jianshu.com/p/4ae9fd7d01cc","image_url":"http://cwb.assets.jianshu.io/notes/images/2771300/weibo/image_205cce98fdd8.jpg","wordage":1338,"has_further_readings":false,"views_count":55,"likes_count":2,"comments_count":0,"rewards_total_count":0}
+  </script>
+
+  <script type="application/json" data-name="uuid">
+    {"uuid":"0fbc5600-eb64-0133-4a35-52540088e616"}
+  </script>
+
+  <script type="application/json" data-name="author">
+    {"id":1421825,"nickname":"大大大龙","slug":"3f0dc6265e87","public_notes_count":5,"followers_count":113,"total_likes_count":87,"is_current_user":false,"is_signed_author":false}
+  </script>
+
+    <script type="application/json" data-name="current-user">
+      {"id":1367171,"slug":"e5b5266354aa","nickname":"simplecode","avatar_url":"http://upload.jianshu.io/users/upload_avatars/1367171/05c9f89e23cf.jpg?imageMogr/thumbnail/90x90/quality/100","blocked_by_author":false,"blocked_user_ids":[],"balance_in_cent":0,"is_a_collection_editor":false}
+    </script>
+
+    <script type="application/json" data-name="comment-participants">
+      []
+    </script>
+
+
+
+
+  <!-- Modal -->
+    <div class="modal pay-modal text-center hide fade" id="pay-modal">
+  <div class="modal-header clearfix">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <form id="new_reward" class="new_reward" target="_blank" action="http://www.jianshu.com/notes/2771300/rewards" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="9F3KvkTz8bdVqjDi10snzqQbU6pIoESWvIdDUj9t7ADk3IxJVEAsTBEphTLFivGlwjC5eZEI0M49I3DeKevFUQ==">
+    <div class="modal-body">
+      <a href="http://www.jianshu.com/users/3f0dc6265e87">
+        <div class="avatar"><img src="./git-osc-iphone_files/0b0c1553a454.jpg" alt="100"></div>
+</a>      <p><i class="fa fa-quote-left pull-left"></i>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！<i class="fa fa-quote-right pull-right"></i></p>
+      <div class="main-inputs text-left">
+        <div class="control-group">
+          <label for="reward_amount">打赏金额</label><i class="fa fa-yen"></i>
+          <input value="2.00" type="text" name="reward[amount_in_yuan]" id="reward_amount_in_yuan">
+        </div>
+        <div class="control-group message">
+          <textarea placeholder="给Ta留言" name="reward[message]" id="reward_message"></textarea>
+        </div>
+      </div>
+      <div class="choose-pay text-left">
+        <h5>选择支付方式：</h5>
+        <div>
+          <label for="reward_channel_alipay">
+            <div class="iradio_minimal checked" style="position: relative;"><input type="radio" value="alipay" checked="checked" name="reward[channel]" id="reward_channel_alipay" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+            <span class="alipay-bg"></span>
+</label>
+          <label for="reward_channel_balance">
+            <div class="iradio_minimal" style="position: relative;"><input type="radio" value="balance" name="reward[channel]" id="reward_channel_balance" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+            简书余额（ 余额：¥ 0.00 ）
+</label>
+          <label for="reward_channel_wx_pub_qr">
+            <div class="iradio_minimal" style="position: relative;"><input type="radio" value="wx_pub_qr" name="reward[channel]" id="reward_channel_wx_pub_qr" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+            微信支付
+</label>        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button name="button" type="submit" class="btn btn-large btn-pay">立即支付</button>
+    </div>
+</form></div>
+
+    <div class="modal success-pay text-center hide fade" id="success-pay">
+  <div class="modal-header clearfix">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  </div>
+  <div class="modal-body">
+    <h3><i class="icon-ok"></i>打赏成功</h3>
+    <img src="./git-osc-iphone_files/complete-pay-25426877089eb23bd76d9d0e6aad89c1.png" alt="Complete pay">
+  </div>
+  <div class="modal-footer">
+    <a class="blue-link" href="http://www.jianshu.com/wallet">查看打赏记录</a>
+  </div>
+</div>
+
+</div>
+
+  </div>
+  <div id="flash" class="hide"></div>
+  
+  <div id="view-mode-modal" tabindex="-1" class="modal hide read-modal" aria-hidden="false" data-js-module="view-mode-modal">
+    <div class="btn-group change-background" data-toggle="buttons-radio">
+
+      <a class="btn btn-daytime active" data-mode="day" data-remote="true" rel="nofollow" data-method="put" href="http://www.jianshu.com/preferences?read_mode=day">
+        <i class="fa fa-sun-o"></i>
+</a>      <a class="btn btn-nighttime " data-mode="night" data-remote="true" rel="nofollow" data-method="put" href="http://www.jianshu.com/preferences?read_mode=night">
+        <i class="fa fa-moon-o"></i>
+</a>    </div>
+    <div class="btn-group change-font" data-toggle="buttons-radio">
+      <a class="btn font " data-font="font1" data-remote="true" rel="nofollow" data-method="put" href="http://www.jianshu.com/preferences?default_font=font1">宋体</a>
+      <a class="btn font hei active" data-font="font2" data-remote="true" rel="nofollow" data-method="put" href="http://www.jianshu.com/preferences?default_font=font2">黑体</a>
+    </div>
+    <div class="btn-group change-locale" data-toggle="buttons-radio">
+      <a class="btn font active" data-locale="zh-CN" data-remote="true" rel="nofollow" data-method="put" href="http://www.jianshu.com/preferences/set_locale?locale=zh-CN">简</a>
+      <a class="btn font hei " data-locale="zh-TW" data-remote="true" rel="nofollow" data-method="put" href="http://www.jianshu.com/preferences/set_locale?locale=zh-TW">繁</a>
+    </div>
+  </div>
+
+  <div id="report-modal" class="modal hide fade modal_report fullscreen" tabindex="-1" role="dialog" aria-labelledby="reportModal" aria-hidden="true" data-js-module="report-modal">
+  <form id="report-form" data-type="json" action="javascript:void(0)" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+    <input type="hidden" name="type" id="type" value="other">
+
+    <div class="modal-header">
+      <b>举报原因</b>
+    </div>
+    <div class="modal-body">
+      <textarea name="content" id="content" maxlength="2000" placeholder="写下你的举报原因..."></textarea>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" data-dismiss="modal" aria-hidden="true" href="javascript:void(0)">取消</a>
+      <input type="submit" name="commit" value="确认" class="btn btn-info">
+    </div>
+</form></div>
+
+
+  <script src="./git-osc-iphone_files/base-d268f0005c67dadb25e29097a6a5bb21.js"></script>
+  
+  <script src="./git-osc-iphone_files/reading-base-9132a81390eb5b2cc4f21734b0e9cd08.js"></script>
+  <script src="./git-osc-iphone_files/note_show-12e94137c3593b4c6278c57fead5ad33.js"></script>
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35169517-1']);
+  _gaq.push(['_setCustomVar', 2, 'User Type', 'Member', 1 ]);
+  _gaq.push(['_trackPageview']);
+
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+<div id="atwho-container"><div id="atwho-ground-comment_content"><div class="atwho-view" id="at-view-64"><ul class="atwho-view-ul"></ul></div></div><div id="atwho-ground-comment_content"><div class="atwho-view" id="at-view-58"><ul class="atwho-view-ul"></ul></div></div></div><div id="feedly-mini" title="feedly Mini tookit"></div><div id="evernoteClearlyNextContainer" style="margin: 0px; padding: 0px; border: none; position: absolute; width: 5px; height: 5px; top: -10px; left: -10px;"></div></body></html>
