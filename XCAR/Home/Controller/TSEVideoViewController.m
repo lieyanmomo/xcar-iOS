@@ -48,6 +48,8 @@
     [self pullDownToRefreshVideoNews];
     // 上拉加载更多数据
     [self pullUpToLoadMoreVideoNews];
+    
+    // haibinshabi
 }
 
 #pragma mark - 刷新数据
