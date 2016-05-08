@@ -56,6 +56,7 @@
     [self pullDownToRefreshLatestNews];
     // 上拉加载更多数据
     [self pullUpToLoadMoreNews];
+    // haibin shabi
 }
 
 #pragma mark - 刷新数据
